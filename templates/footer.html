@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.copyright-footer {
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.heart-icon {
+  color: #ff4b4b;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.company-name {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.company-name:hover {
+  color: #9fdfff;
+}
+</style>
+</head>
+<body>
+
+<footer class="copyright-footer">
+  <div class="container">
+    <p class="copyright-text">
+      © 2025 <span class="company-name">Anantheswar's Company</span>. All rights reserved. 
+      Made with <span class="heart-icon">❤️</span>
+    </p>
+  </div>
+</footer>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+</body>
+</html>

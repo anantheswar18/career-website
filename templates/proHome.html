@@ -117,7 +117,8 @@
 
         .button {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 12px 30px;
+            margin: 40px 0;
             background-color: #4a90e2;
             color: white;
             text-decoration: none;
@@ -151,6 +152,7 @@
             text-align: center;
         }
 
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -160,9 +162,11 @@
                 padding: 1rem;
             }
         }
+        
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
     <div class="hero">
         <h1>Anantheswara Shenoy V</h1>
         <div style="width: 60px; height: 4px; background: white; margin: 0 auto;"></div>
@@ -170,7 +174,7 @@
 
     <div class="container">
         <div class="card">
-            <img src="/api/placeholder/1200/400" alt="Inspirational Quote" class="featured-image">
+            <img src="https://c4.wallpaperflare.com/wallpaper/851/501/292/minimalism-programming-code-wallpaper-preview.jpg" alt="Inspirational Quote" class="featured-image">
             <div class="content">
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -190,5 +194,6 @@
             <button class="button">Contact Us</button>
         </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>

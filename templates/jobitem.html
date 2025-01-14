@@ -1,20 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
- <div class="container">
-   <div class="jobs-container">
-        <div class="jobs-grid">
-            <div class="job-card"> 
-                <div class="job-details">
-                    <h3>{{job['job title']}}</h3>
-                    <p><b>Name:</b> {{job['name']}}</p>
-                    {% if 'location' in job %}
-                    <div style="margin: 8px 0;">
-                        <b>Location:</b> {{job['location']}}
+        .jobs-container {
+            width: 100%;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .job-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #fff;
+        }
+
+        .job-details h3 {
+            margin: 0 0 8px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s ease-in-out, transform 0.2s ease;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-45deg);
+            transition: left 0.5s ease-in-out;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button:hover {
+            background: linear-gradient(90deg, #0056b3, #007BFF);
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jobs-container">
+            <div class="jobs-grid">
+                <div class="job-card"> 
+                    <div class="job-details">
+                        <h3>{{job['job title']}}</h3>
+                        <p><b>Name:</b> {{job['name']}}</p>
+                        {% if 'location' in job %}
+                        <div style="margin: 8px 0;">
+                            <b>Location:</b> {{job['location']}}
+                        </div>
+                        {% endif %}
+                        <p><small>Posted: January 2, 2025</small></p>
                     </div>
-                    {% endif %}
-                    <p><small>Posted: January 2, 2025</small></p>
+                    <button class="button apply-button">Apply Now</button>
                 </div>
-                <button class="button apply-button">Apply Now</button>
-             </div>
+                <div class="job-card"> 
+                    <div class="job-details">
+                        <h3>{{job['job title']}}</h3>
+                        <p><b>Name:</b> {{job['name']}}</p>
+                        {% if 'location' in job %}
+                        <div style="margin: 8px 0;">
+                            <b>Location:</b> {{job['location']}}
+                        </div>
+                        {% endif %}
+                        <p><small>Posted: January 2, 2025</small></p>
+                    </div>
+                    <button class="button apply-button">Apply Now</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>
