@@ -26,7 +26,13 @@ JOBS = [
         "id":4,
         "name" : "Sulekha Naidu",
         "job title" : "Backend Senior Developer",
-        "location" : "Bangalore,Kerala"
+        "location" : "Bangalore,Karnataka"
+    },
+    {
+        "id":5,
+        "name" : "Aswin V S",
+        "job title" : "Devops Engineer",
+        "location" : "Kochi,Kerala"
     },
 ]
 

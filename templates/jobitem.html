@@ -12,15 +12,9 @@
             box-sizing: border-box;
         }
 
-        .jobs-container {
-            width: 100%;
-        }
 
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
+
+
 
         .job-card {
             border: 1px solid #ccc;
@@ -76,10 +70,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="jobs-container">
-            <div class="jobs-grid">
-                <div class="job-card"> 
+            <div class="job-card"> 
                     <div class="job-details">
                         <h3>{{job['job title']}}</h3>
                         <p><b>Name:</b> {{job['name']}}</p>
@@ -92,21 +83,5 @@
                     </div>
                     <button class="button apply-button">Apply Now</button>
                 </div>
-                <div class="job-card"> 
-                    <div class="job-details">
-                        <h3>{{job['job title']}}</h3>
-                        <p><b>Name:</b> {{job['name']}}</p>
-                        {% if 'location' in job %}
-                        <div style="margin: 8px 0;">
-                            <b>Location:</b> {{job['location']}}
-                        </div>
-                        {% endif %}
-                        <p><small>Posted: January 2, 2025</small></p>
-                    </div>
-                    <button class="button apply-button">Apply Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

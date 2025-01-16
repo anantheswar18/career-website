@@ -73,7 +73,7 @@
         .jobs-grid {
             display: grid;
             /* grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); */
-             grid-template-columns: repeat(2, 1fr);
+             grid-template-columns: repeat(2, 2fr);
             gap: 1.5rem;
             margin: 2rem 0;
         }
@@ -152,6 +152,16 @@
             text-align: center;
         }
 
+        .jobs-container {
+            width: 100%;
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            gap: 16px;
+        }
+
 
         @media (max-width: 768px) {
             .hero h1 {
@@ -184,11 +194,13 @@
 
         <h2>Job Openings</h2>
     
-            <div>
+        <div class="jobs-container">
+            <div class="jobs-grid">
                 {% for job in jobs %}
-                {% include 'jobitem.html'%}
+                    {% include 'jobitem.html' %}
                 {% endfor %}
             </div>
+        </div>
         </div>
         <div class="text-center">
             <button class="button">Contact Us</button>
